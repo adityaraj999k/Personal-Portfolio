@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Phone, ArrowUpRight } from "lucide-react";
+import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { profile } from "../data/profile";
 import SectionHeading from "../components/SectionHeading";
 
@@ -21,12 +21,6 @@ const channels = [
     value: profile.linkedinHandle,
     href: profile.linkedin,
     icon: Linkedin,
-  },
-  {
-    label: "Phone",
-    value: profile.phone,
-    href: `tel:${profile.phone.replace(/\s/g, "")}`,
-    icon: Phone,
   },
 ];
 
@@ -78,7 +72,9 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                className="group flex flex-col justify-between gap-6 rounded-xl border border-base-border bg-base-raised/40 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40"
+                className={`group flex flex-col justify-between gap-6 rounded-xl border border-base-border bg-base-raised/40 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 ${
+                  i === 0 ? "sm:col-span-2" : ""
+                }`}
               >
                 <div className="flex items-center justify-between">
                   <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10 text-accent-soft">

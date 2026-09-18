@@ -9,7 +9,6 @@ export const profile = {
   location: "Phagwara, Punjab, India",
   availability: "Available for software engineering opportunities",
   email: "adityaraj999k@gmail.com",
-  phone: "+91 96967 31918",
   github: "https://github.com/adityaraj999k",
   githubHandle: "github.com/adityaraj999k",
   linkedin: "https://www.linkedin.com/in/aditya-raj-kushwah/",
